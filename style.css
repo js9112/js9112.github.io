@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+   font-family:"Poppins",sans-serif;
+}
+
+button {
+  background-color: #3399ff; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  margin: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: .2em;
+  cursor: pointer; /* Cursor on hover */
+}
+
+button:hover {
+  background-color: #0066cc;
+}
+input[type=file] {
+font-size: 14px;
+}
+
+input[type=file]::file-selector-button {
+  background-color: #3399ff; /* Blue */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: .2em;
+  cursor: pointer; /* Cursor on hover */
+}
+input[type=file]:hover::file-selector-button {
+  background-color: #0066cc;
+}
+
+
+input[type=file]::-webkit-file-upload-button {
+  background-color: #3399ff; /* Blue */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: .2em;
+  cursor: pointer; /* Cursor on hover */
+}
+input[type=file]:hover::-webkit-file-upload-button {
+  background-color: #0066cc;
+}
