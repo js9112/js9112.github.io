@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form id="calculator" >
+Flour: <span id="flour_amount">500 g</span> <input type="range" class="slider" name="flour" oninput="recalculate()" min=0 max=1000>
+
+<br>
+Water: <span id="water_amount">500 g</span>
+<input type="range" class="slider" name="water" oninput="recalculate()" min=0 max=1000>
+
+<br>
+Starter (100% hydration): <span id="starter_amount">250 g</span>
+<input type="range" class="slider" name="starter" oninput="recalculate()" min=0 max=500>
+
+<br>
+Salt (2%): <span id="salt_amount">12.5 g</span>
+<input type="range" class="slider" name="salt" oninput="recalculate()" min=0 max=25 disabled="true" step=0.1>
+
+<br>
+Total weight: <span id="total_amount">1250 g</span>
+<input type="range" class="slider res" name="total" id="total" oninput="recalculateIngredients()" min=0 max=2500>
+
+<br>
+Hydration: <span id="hydration_value">100%</span>
+<input type="range" class="slider res" name="hydration" id="hydration" oninput="recalculateIngredients()" min=0 max=200>
+
+<br>
+Starter proportion: <span id="starter_proportion_value">40%</span>
+<input type="range" class="slider res" name="starter_proportion" id="starter_proportion" oninput="recalculateIngredients()" min=0 max=80>
+
+<!-- Starter hydration <span id="starter_hydration_value">100%</span>
+<input type="range" class="slider" name="starter_hydration" id="starter_hydration" oninput="recalculateIngredients();recalculate_" min=0 max=200> -->
+
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
