@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fafafa;
+        color: #555;
+    }
+    a {
+        color:#333;
+    }
+    a:hover {
+        color: #000;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #212529;
+        color: #b8bcc1;
+    }
+    a {
+        color: #ebeef1;
+    }
+    a:hover {
+        color: #fff;
+    }
+}
+
 body {
    font-family:"Poppins",sans-serif;
 }

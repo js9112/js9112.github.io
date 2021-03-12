@@ -197,8 +197,8 @@ fileSelector.addEventListener('change', (event) => {
   });
 
 function readJSON(file) {
-  	document.getElementById("error").innerHTML=''
-  	document.getElementById("success").innerHTML=''
+  	document.getElementById("error").innerHTML='';
+  	document.getElementById("success").innerHTML='';
   if (file.type!="application/json") {
   	document.getElementById("error").innerHTML='File is not JSON.'
     console.log('File is not JSON.', file.type, file);
