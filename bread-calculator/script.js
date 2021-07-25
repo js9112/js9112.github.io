@@ -55,4 +55,4 @@ function getCookies() {
     }
     recalculate()
 }
-
+window.onload = getCookies;
