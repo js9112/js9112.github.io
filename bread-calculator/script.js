@@ -5,6 +5,7 @@ var f=parseFloat(theCalculator.elements.flour.value);
 var w=parseFloat(theCalculator.elements.water.value);
 var s=parseFloat(theCalculator.elements.starter.value);
 theCalculator.elements.total.value=w+f+s+0.02*(w+s/2)
+theCalculator.elements.hydration.value=100*(w+s/2)/(f+s/2+0.02*(w+s/2))
 theCalculator.elements.starter_proportion.value=s/(f+s/2)*100
 displayValues()
 }
@@ -19,6 +20,7 @@ document.getElementById('starter_amount').innerHTML = theCalculator.elements.sta
 document.getElementById('total_amount').innerHTML = theCalculator.elements.total.value+" g"
 document.getElementById('hydration_value').innerHTML = theCalculator.elements.hydration.value+"%"
 document.getElementById('starter_proportion_value').innerHTML = theCalculator.elements.starter_proportion.value+"%"
+setCookies();
 }
 function recalculateIngredients() 
 {
@@ -31,3 +33,26 @@ theCalculator.elements.water.value=25*(2*h*t-p*t)/(50*h+51)
 theCalculator.elements.starter.value=50*p*t/(50*h+51)
 displayValues()
 }
+function setCookies(key,value)
+{
+var elements = document.forms.calculator.elements;
+document.cookie = "username=John Doe";
+console.log(document.cookie)
+for (i = 0; i < elements.length; i++) {
+  document.cookie=elements[i].name+"="+elements[i].value;
+  //console.log(elements[i].name+"="+elements[i].value,document.cookie)
+}
+}
+function getCookies() {
+    var theCalculator = document.forms.calculator;
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
+    // Loop through the array elements
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        theCalculator[cookiePair[0].trim()].value=cookiePair[1];
+    }
+    recalculate()
+}
+document.forms.onload = getCookies;
+
