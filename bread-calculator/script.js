@@ -55,5 +55,5 @@ function getCookies() {
     }
     recalculate()
 }
-document.forms.onload = getCookies;
+document.forms.calculator.onload = getCookies;
 
