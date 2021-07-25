@@ -36,14 +36,13 @@ displayValues()
 function setCookies(key,value)
 {
 var elements = document.forms.calculator.elements;
-document.cookie = "username=John Doe";
-console.log(document.cookie)
 for (i = 0; i < elements.length; i++) {
   document.cookie=elements[i].name+"="+elements[i].value;
-  //console.log(elements[i].name+"="+elements[i].value,document.cookie)
 }
+console.log(document.cookie)
 }
 function getCookies() {
+    console.log('getting cookies');
     var theCalculator = document.forms.calculator;
     // Split cookie string and get all individual name=value pairs in an array
     var cookieArr = document.cookie.split(";");
