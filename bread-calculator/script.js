@@ -50,7 +50,8 @@ function getCookies() {
     for(var i = 0; i < cookieArr.length; i++) {
         var cookiePair = cookieArr[i].split("=");
         console.log(cookiePair);
-        theCalculator.elements[cookiePair[0].trim()].value=cookiePair[1];
+        if (theCalculator.elements[cookiePair[0].trim()]) {
+        theCalculator.elements[cookiePair[0].trim()].value=cookiePair[1];}
     }
     recalculate()
 }
