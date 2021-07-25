@@ -49,7 +49,7 @@ function getCookies() {
     // Loop through the array elements
     for(var i = 0; i < cookieArr.length; i++) {
         var cookiePair = cookieArr[i].split("=");
-        theCalculator.getElementByName(cookiePair[0].trim()).value=cookiePair[1];
+        theCalculator.getElementById(cookiePair[0].trim()).value=cookiePair[1];
     }
     recalculate()
 }
